@@ -1,0 +1,480 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.25.1003.1122                               -->
+<workbook original-version='18.1' source-build='2024.2.16 (20242.25.1003.1122)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='ZOOM_ANALYTICS' inline='true' name='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='CMMOEUI-DH77804.snowflakecomputing.com' name='snowflake.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p'>
+            <connection authentication='Username Password' class='snowflake' dbname='ZOOM' max-varchar-size='' odbc-connect-string-extras='' one-time-sql='' schema='GOLD' server='cmmoeui-dh77804.snowflakecomputing.com' service='ACCOUNTADMIN' username='SATHYA' warehouse='COMPUTE_WH' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='snowflake.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' name='GO_MEETING_FACTS' table='[ZOOM].[GOLD].[GO_MEETING_FACTS]' type='table' />
+          <relation connection='snowflake.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' name='GO_USER_DIMENSION' table='[ZOOM].[GOLD].[GO_USER_DIMENSION]' type='table' />
+          <relation connection='snowflake.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' name='GO_QUALITY_FACTS' table='[ZOOM].[GOLD].[GO_QUALITY_FACTS]' type='table' />
+          <relation connection='snowflake.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' name='GO_ENGAGEMENT_SUMMARY' table='[ZOOM].[GOLD].[GO_ENGAGEMENT_SUMMARY]' type='table' />
+          <relation connection='snowflake.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' name='GO_ORGANIZATION_DIMENSION' table='[ZOOM].[GOLD].[GO_ORGANIZATION_DIMENSION]' type='table' />
+          <relation connection='snowflake.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' name='GO_TIME_DIMENSION' table='[ZOOM].[GOLD].[GO_TIME_DIMENSION]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[MEETING_ID]' value='[GO_MEETING_FACTS].[MEETING_ID]' />
+          <map key='[HOST_ID]' value='[GO_MEETING_FACTS].[HOST_ID]' />
+          <map key='[MEETING_TOPIC]' value='[GO_MEETING_FACTS].[MEETING_TOPIC]' />
+          <map key='[START_TIME]' value='[GO_MEETING_FACTS].[START_TIME]' />
+          <map key='[END_TIME]' value='[GO_MEETING_FACTS].[END_TIME]' />
+          <map key='[DURATION_MINUTES]' value='[GO_MEETING_FACTS].[DURATION_MINUTES]' />
+          <map key='[PARTICIPANT_COUNT]' value='[GO_MEETING_FACTS].[PARTICIPANT_COUNT]' />
+          <map key='[MAX_CONCURRENT_PARTICIPANTS]' value='[GO_MEETING_FACTS].[MAX_CONCURRENT_PARTICIPANTS]' />
+          <map key='[MEETING_TYPE]' value='[GO_MEETING_FACTS].[MEETING_TYPE]' />
+          <map key='[MEETING_STATUS]' value='[GO_MEETING_FACTS].[MEETING_STATUS]' />
+          <map key='[QUALITY_SCORE_AVG]' value='[GO_MEETING_FACTS].[QUALITY_SCORE_AVG]' />
+          <map key='[ENGAGEMENT_SCORE]' value='[GO_MEETING_FACTS].[ENGAGEMENT_SCORE]' />
+          <map key='[RECORDING_ENABLED]' value='[GO_MEETING_FACTS].[RECORDING_ENABLED]' />
+          <map key='[SCREEN_SHARE_COUNT]' value='[GO_MEETING_FACTS].[SCREEN_SHARE_COUNT]' />
+          <map key='[CHAT_MESSAGE_COUNT]' value='[GO_MEETING_FACTS].[CHAT_MESSAGE_COUNT]' />
+          <map key='[USER_ID]' value='[GO_USER_DIMENSION].[USER_ID]' />
+          <map key='[USER_NAME]' value='[GO_USER_DIMENSION].[USER_NAME]' />
+          <map key='[EMAIL_ADDRESS]' value='[GO_USER_DIMENSION].[EMAIL_ADDRESS]' />
+          <map key='[DEPARTMENT_NAME]' value='[GO_USER_DIMENSION].[DEPARTMENT_NAME]' />
+          <map key='[JOB_TITLE]' value='[GO_USER_DIMENSION].[JOB_TITLE]' />
+          <map key='[LICENSE_TYPE]' value='[GO_USER_DIMENSION].[LICENSE_TYPE]' />
+          <map key='[ACCOUNT_STATUS]' value='[GO_USER_DIMENSION].[ACCOUNT_STATUS]' />
+          <map key='[ORGANIZATION_ID]' value='[GO_ORGANIZATION_DIMENSION].[ORGANIZATION_ID]' />
+          <map key='[ORGANIZATION_NAME]' value='[GO_ORGANIZATION_DIMENSION].[ORGANIZATION_NAME]' />
+          <map key='[INDUSTRY_CLASSIFICATION]' value='[GO_ORGANIZATION_DIMENSION].[INDUSTRY_CLASSIFICATION]' />
+          <map key='[ORGANIZATION_SIZE]' value='[GO_ORGANIZATION_DIMENSION].[ORGANIZATION_SIZE]' />
+          <map key='[DATE_KEY]' value='[GO_TIME_DIMENSION].[DATE_KEY]' />
+          <map key='[YEAR_NUMBER]' value='[GO_TIME_DIMENSION].[YEAR_NUMBER]' />
+          <map key='[MONTH_NAME]' value='[GO_TIME_DIMENSION].[MONTH_NAME]' />
+          <map key='[QUARTER_NUMBER]' value='[GO_TIME_DIMENSION].[QUARTER_NUMBER]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>MEETING_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MEETING_ID]</local-name>
+            <parent-name>[GO_MEETING_FACTS]</parent-name>
+            <remote-alias>MEETING_ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>"SQL_VARCHAR"</attribute>
+              <attribute datatype='string' name='DebugWireType'>"SQL_C_CHAR"</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>"true"</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GO_MEETING_FACTS_A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Meeting ID' datatype='string' name='[MEETING_ID]' role='dimension' type='nominal' />
+      <column caption='Host ID' datatype='string' name='[HOST_ID]' role='dimension' type='nominal' />
+      <column caption='Meeting Topic' datatype='string' name='[MEETING_TOPIC]' role='dimension' type='nominal' />
+      <column caption='Start Time' datatype='datetime' name='[START_TIME]' role='dimension' type='ordinal' />
+      <column caption='End Time' datatype='datetime' name='[END_TIME]' role='dimension' type='ordinal' />
+      <column caption='Duration Minutes' datatype='integer' name='[DURATION_MINUTES]' role='measure' type='quantitative' />
+      <column caption='Participant Count' datatype='integer' name='[PARTICIPANT_COUNT]' role='measure' type='quantitative' />
+      <column caption='Max Concurrent Participants' datatype='integer' name='[MAX_CONCURRENT_PARTICIPANTS]' role='measure' type='quantitative' />
+      <column caption='Meeting Type' datatype='string' name='[MEETING_TYPE]' role='dimension' type='nominal' />
+      <column caption='Meeting Status' datatype='string' name='[MEETING_STATUS]' role='dimension' type='nominal' />
+      <column caption='Quality Score Average' datatype='real' name='[QUALITY_SCORE_AVG]' role='measure' type='quantitative' />
+      <column caption='Engagement Score' datatype='real' name='[ENGAGEMENT_SCORE]' role='measure' type='quantitative' />
+      <column caption='Recording Enabled' datatype='boolean' name='[RECORDING_ENABLED]' role='dimension' type='nominal' />
+      <column caption='Screen Share Count' datatype='integer' name='[SCREEN_SHARE_COUNT]' role='measure' type='quantitative' />
+      <column caption='Chat Message Count' datatype='integer' name='[CHAT_MESSAGE_COUNT]' role='measure' type='quantitative' />
+      <column caption='User ID' datatype='string' name='[USER_ID]' role='dimension' type='nominal' />
+      <column caption='User Name' datatype='string' name='[USER_NAME]' role='dimension' type='nominal' />
+      <column caption='Email Address' datatype='string' name='[EMAIL_ADDRESS]' role='dimension' type='nominal' />
+      <column caption='Department Name' datatype='string' name='[DEPARTMENT_NAME]' role='dimension' type='nominal' />
+      <column caption='Job Title' datatype='string' name='[JOB_TITLE]' role='dimension' type='nominal' />
+      <column caption='License Type' datatype='string' name='[LICENSE_TYPE]' role='dimension' type='nominal' />
+      <column caption='Account Status' datatype='string' name='[ACCOUNT_STATUS]' role='dimension' type='nominal' />
+      <column caption='Organization ID' datatype='string' name='[ORGANIZATION_ID]' role='dimension' type='nominal' />
+      <column caption='Organization Name' datatype='string' name='[ORGANIZATION_NAME]' role='dimension' type='nominal' />
+      <column caption='Industry Classification' datatype='string' name='[INDUSTRY_CLASSIFICATION]' role='dimension' type='nominal' />
+      <column caption='Organization Size' datatype='string' name='[ORGANIZATION_SIZE]' role='dimension' type='nominal' />
+      <column caption='Date Key' datatype='date' name='[DATE_KEY]' role='dimension' type='ordinal' />
+      <column caption='Year Number' datatype='integer' name='[YEAR_NUMBER]' role='dimension' type='quantitative' />
+      <column caption='Month Name' datatype='string' name='[MONTH_NAME]' role='dimension' type='nominal' />
+      <column caption='Quarter Number' datatype='integer' name='[QUARTER_NUMBER]' role='dimension' type='quantitative' />
+      <column caption='Masked Email' datatype='string' name='[Calculation_Masked_Email]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='LEFT([EMAIL_ADDRESS], 1) + &quot;****@&quot; + SPLIT([EMAIL_ADDRESS], &quot;@&quot;, 2)' />
+      </column>
+      <column caption='Average Meeting Duration' datatype='real' name='[Calculation_Avg_Duration]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([DURATION_MINUTES])' />
+      </column>
+      <column caption='Total Meetings' datatype='integer' name='[Calculation_Total_Meetings]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([MEETING_ID])' />
+      </column>
+      <column caption='Average Participants' datatype='real' name='[Calculation_Avg_Participants]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([PARTICIPANT_COUNT])' />
+      </column>
+      <column caption='Meeting Utilization Rate' datatype='real' name='[Calculation_Utilization_Rate]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([DURATION_MINUTES]) / (COUNT([MEETING_ID]) * 60) * 100' />
+      </column>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='"United States"' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Meeting Duration by Type'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_ANALYTICS' name='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p'>
+            <column caption='Duration Minutes' datatype='integer' name='[DURATION_MINUTES]' role='measure' type='quantitative' />
+            <column caption='Meeting Type' datatype='string' name='[MEETING_TYPE]' role='dimension' type='nominal' />
+            <column-instance column='[MEETING_TYPE]' derivation='None' name='[none:MEETING_TYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[DURATION_MINUTES]' derivation='Sum' name='[sum:DURATION_MINUTES:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[sum:DURATION_MINUTES:qk]</rows>
+        <cols>[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[none:MEETING_TYPE:nk]</cols>
+      </table>
+      <simple-id uuid='{A1B2C3D4-E5F6-G7H8-I9J0-K1L2M3N4O5P6}' />
+    </worksheet>
+    <worksheet name='Quality Score Distribution'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_ANALYTICS' name='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p'>
+            <column caption='Meeting Type' datatype='string' name='[MEETING_TYPE]' role='dimension' type='nominal' />
+            <column caption='Quality Score Average' datatype='real' name='[QUALITY_SCORE_AVG]' role='measure' type='quantitative' />
+            <column-instance column='[MEETING_TYPE]' derivation='None' name='[none:MEETING_TYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[QUALITY_SCORE_AVG]' derivation='Avg' name='[avg:QUALITY_SCORE_AVG:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[none:MEETING_TYPE:nk]' />
+              <text column='[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[avg:QUALITY_SCORE_AVG:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B2C3D4E5-F6G7-H8I9-J0K1-L2M3N4O5P6Q7}' />
+    </worksheet>
+    <worksheet name='Participant Engagement Trends'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_ANALYTICS' name='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p'>
+            <column caption='Start Time' datatype='datetime' name='[START_TIME]' role='dimension' type='ordinal' />
+            <column caption='Engagement Score' datatype='real' name='[ENGAGEMENT_SCORE]' role='measure' type='quantitative' />
+            <column caption='Participant Count' datatype='integer' name='[PARTICIPANT_COUNT]' role='measure' type='quantitative' />
+            <column-instance column='[START_TIME]' derivation='Month-Year' name='[my:START_TIME:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[ENGAGEMENT_SCORE]' derivation='Avg' name='[avg:ENGAGEMENT_SCORE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PARTICIPANT_COUNT]' derivation='Sum' name='[sum:PARTICIPANT_COUNT:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[avg:ENGAGEMENT_SCORE:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[avg:ENGAGEMENT_SCORE:qk]</rows>
+        <cols>[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[my:START_TIME:ok]</cols>
+      </table>
+      <simple-id uuid='{C3D4E5F6-G7H8-I9J0-K1L2-M3N4O5P6Q7R8}' />
+    </worksheet>
+    <worksheet name='Department Activity Analysis'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_ANALYTICS' name='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p'>
+            <column caption='Department Name' datatype='string' name='[DEPARTMENT_NAME]' role='dimension' type='nominal' />
+            <column caption='Total Meetings' datatype='integer' name='[Calculation_Total_Meetings]' role='measure' type='quantitative' />
+            <column caption='Average Meeting Duration' datatype='real' name='[Calculation_Avg_Duration]' role='measure' type='quantitative' />
+            <column caption='Masked Email' datatype='string' name='[Calculation_Masked_Email]' role='dimension' type='nominal' />
+            <column-instance column='[DEPARTMENT_NAME]' derivation='None' name='[none:DEPARTMENT_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_Total_Meetings]' derivation='Sum' name='[sum:Calculation_Total_Meetings:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_Avg_Duration]' derivation='Avg' name='[avg:Calculation_Avg_Duration:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[sum:Calculation_Total_Meetings:qk]' />
+              <color column='[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[avg:Calculation_Avg_Duration:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[none:DEPARTMENT_NAME:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{D4E5F6G7-H8I9-J0K1-L2M3-N4O5P6Q7R8S9}' />
+    </worksheet>
+    <worksheet name='User Activity Dashboard'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_ANALYTICS' name='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p'>
+            <column caption='User Name' datatype='string' name='[USER_NAME]' role='dimension' type='nominal' />
+            <column caption='Masked Email' datatype='string' name='[Calculation_Masked_Email]' role='dimension' type='nominal' />
+            <column caption='Total Meetings' datatype='integer' name='[Calculation_Total_Meetings]' role='measure' type='quantitative' />
+            <column caption='Meeting Utilization Rate' datatype='real' name='[Calculation_Utilization_Rate]' role='measure' type='quantitative' />
+            <column-instance column='[USER_NAME]' derivation='None' name='[none:USER_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_Masked_Email]' derivation='None' name='[none:Calculation_Masked_Email:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_Total_Meetings]' derivation='Sum' name='[sum:Calculation_Total_Meetings:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_Utilization_Rate]' derivation='Avg' name='[avg:Calculation_Utilization_Rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[sum:Calculation_Total_Meetings:qk]' />
+              <color column='[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[avg:Calculation_Utilization_Rate:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[none:USER_NAME:nk], [federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[none:Calculation_Masked_Email:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{E5F6G7H8-I9J0-K1L2-M3N4-O5P6Q7R8S9T0}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Meeting Duration by Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[none:MEETING_TYPE:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F6G7H8I9-J0K1-L2M3-N4O5-P6Q7R8S9T0U1}' />
+    </window>
+    <window class='worksheet' name='Quality Score Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[none:MEETING_TYPE:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[none:MEETING_TYPE:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{G7H8I9J0-K1L2-M3N4-O5P6-Q7R8S9T0U1V2}' />
+    </window>
+    <window class='worksheet' name='Participant Engagement Trends'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[my:START_TIME:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{H8I9J0K1-L2M3-N4O5-P6Q7-R8S9T0U1V2W3}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Department Activity Analysis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[sum:Calculation_Total_Meetings:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[none:DEPARTMENT_NAME:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{I9J0K1L2-M3N4-O5P6-Q7R8-S9T0U1V2W3X4}' />
+    </window>
+    <window class='worksheet' name='User Activity Dashboard'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p].[none:USER_NAME:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{J0K1L2M3-N4O5-P6Q7-R8S9-T0U1V2W3X4Y5}' />
+    </window>
+  </windows>
+</workbook>
