@@ -1,0 +1,528 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.23.1017.0948                               -->
+<workbook original-version='18.1' source-build='2023.3.0 (20233.23.1017.0948)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Quality Analytics Data' inline='true' name='federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cmmoeui-dh77804.snowflakecomputing.com' name='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c'>
+            <connection authentication='Username Password' class='snowflake' dbname='ZOOM' odbc-connect-string-extras='' one-time-sql='' schema='GOLD' server='cmmoeui-dh77804.snowflakecomputing.com' service='ACCOUNTADMIN' username='SATHYA' password='Sathyanarayana@20' warehouse='COMPUTE_WH' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_QUALITY_METRICS_SUMMARY' table='[ZOOM].[GOLD].[GO_QUALITY_METRICS_SUMMARY]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_QUALITY_METRICS_SUMMARY' table='[ZOOM].[GOLD].[GO_QUALITY_METRICS_SUMMARY]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_ENGAGEMENT_SUMMARY' table='[ZOOM].[GOLD].[GO_ENGAGEMENT_SUMMARY]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_ENGAGEMENT_SUMMARY' table='[ZOOM].[GOLD].[GO_ENGAGEMENT_SUMMARY]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_DAILY_MEETING_SUMMARY' table='[ZOOM].[GOLD].[GO_DAILY_MEETING_SUMMARY]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_DAILY_MEETING_SUMMARY' table='[ZOOM].[GOLD].[GO_DAILY_MEETING_SUMMARY]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_ORGANIZATION_DIMENSION' table='[ZOOM].[GOLD].[GO_ORGANIZATION_DIMENSION]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_ORGANIZATION_DIMENSION' table='[ZOOM].[GOLD].[GO_ORGANIZATION_DIMENSION]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>SUMMARY_DATE</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[SUMMARY_DATE]</local-name>
+            <parent-name>[GO_QUALITY_METRICS_SUMMARY]</parent-name>
+            <remote-alias>SUMMARY_DATE</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVERAGE_AUDIO_QUALITY</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[AVERAGE_AUDIO_QUALITY]</local-name>
+            <parent-name>[GO_QUALITY_METRICS_SUMMARY]</parent-name>
+            <remote-alias>AVERAGE_AUDIO_QUALITY</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVERAGE_VIDEO_QUALITY</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[AVERAGE_VIDEO_QUALITY]</local-name>
+            <parent-name>[GO_QUALITY_METRICS_SUMMARY]</parent-name>
+            <remote-alias>AVERAGE_VIDEO_QUALITY</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONNECTION_SUCCESS_RATE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[CONNECTION_SUCCESS_RATE]</local-name>
+            <parent-name>[GO_QUALITY_METRICS_SUMMARY]</parent-name>
+            <remote-alias>CONNECTION_SUCCESS_RATE</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>USER_SATISFACTION_SCORE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[USER_SATISFACTION_SCORE]</local-name>
+            <parent-name>[GO_QUALITY_METRICS_SUMMARY]</parent-name>
+            <remote-alias>USER_SATISFACTION_SCORE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVERAGE_PARTICIPATION_RATE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[AVERAGE_PARTICIPATION_RATE]</local-name>
+            <parent-name>[GO_ENGAGEMENT_SUMMARY]</parent-name>
+            <remote-alias>AVERAGE_PARTICIPATION_RATE</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTAL_CHAT_MESSAGES</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[TOTAL_CHAT_MESSAGES]</local-name>
+            <parent-name>[GO_ENGAGEMENT_SUMMARY]</parent-name>
+            <remote-alias>TOTAL_CHAT_MESSAGES</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVERAGE_ATTENTION_SCORE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[AVERAGE_ATTENTION_SCORE]</local-name>
+            <parent-name>[GO_ENGAGEMENT_SUMMARY]</parent-name>
+            <remote-alias>AVERAGE_ATTENTION_SCORE</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTAL_MEETINGS</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[TOTAL_MEETINGS]</local-name>
+            <parent-name>[GO_DAILY_MEETING_SUMMARY]</parent-name>
+            <remote-alias>TOTAL_MEETINGS</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVERAGE_MEETING_DURATION</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[AVERAGE_MEETING_DURATION]</local-name>
+            <parent-name>[GO_DAILY_MEETING_SUMMARY]</parent-name>
+            <remote-alias>AVERAGE_MEETING_DURATION</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ORGANIZATION_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ORGANIZATION_NAME]</local-name>
+            <parent-name>[GO_ORGANIZATION_DIMENSION]</parent-name>
+            <remote-alias>ORGANIZATION_NAME</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Summary Date' datatype='date' name='[SUMMARY_DATE]' role='dimension' type='ordinal' />
+      <column caption='Average Audio Quality' datatype='real' name='[AVERAGE_AUDIO_QUALITY]' role='measure' type='quantitative' />
+      <column caption='Average Video Quality' datatype='real' name='[AVERAGE_VIDEO_QUALITY]' role='measure' type='quantitative' />
+      <column caption='Connection Success Rate' datatype='real' name='[CONNECTION_SUCCESS_RATE]' role='measure' type='quantitative' />
+      <column caption='User Satisfaction Score' datatype='real' name='[USER_SATISFACTION_SCORE]' role='measure' type='quantitative' />
+      <column caption='Average Participation Rate' datatype='real' name='[AVERAGE_PARTICIPATION_RATE]' role='measure' type='quantitative' />
+      <column caption='Total Chat Messages' datatype='integer' name='[TOTAL_CHAT_MESSAGES]' role='measure' type='quantitative' />
+      <column caption='Average Attention Score' datatype='real' name='[AVERAGE_ATTENTION_SCORE]' role='measure' type='quantitative' />
+      <column caption='Total Meetings' datatype='integer' name='[TOTAL_MEETINGS]' role='measure' type='quantitative' />
+      <column caption='Average Meeting Duration' datatype='real' name='[AVERAGE_MEETING_DURATION]' role='measure' type='quantitative' />
+      <column caption='Organization Name' datatype='string' name='[ORGANIZATION_NAME]' role='dimension' type='nominal' />
+      <column caption='Overall Quality Score' datatype='real' name='[Calculation_Q1W2E3R4T5Y6U7I8]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([AVERAGE_AUDIO_QUALITY] + [AVERAGE_VIDEO_QUALITY]) / 2' />
+      </column>
+      <column caption='Engagement Index' datatype='real' name='[Calculation_W2E3R4T5Y6U7I8O9]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([AVERAGE_PARTICIPATION_RATE] + [AVERAGE_ATTENTION_SCORE]) / 2' />
+      </column>
+      <column caption='Meeting Efficiency Score' datatype='real' name='[Calculation_E3R4T5Y6U7I8O9P0]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[CONNECTION_SUCCESS_RATE] * [USER_SATISFACTION_SCORE] / 100' />
+      </column>
+      <column caption='Communication Activity Level' datatype='real' name='[Calculation_R4T5Y6U7I8O9P0A1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[TOTAL_CHAT_MESSAGES] / [TOTAL_MEETINGS]' />
+      </column>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='GO_QUALITY_METRICS_SUMMARY' id='GO_QUALITY_METRICS_SUMMARY_Q1W2E3R4T5Y6U7I8O9P0A1S2'>
+            <properties context=''>
+              <relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_QUALITY_METRICS_SUMMARY' table='[ZOOM].[GOLD].[GO_QUALITY_METRICS_SUMMARY]' type='table' />
+            </properties>
+          </object>
+          <object caption='GO_ENGAGEMENT_SUMMARY' id='GO_ENGAGEMENT_SUMMARY_W2E3R4T5Y6U7I8O9P0A1S2D3'>
+            <properties context=''>
+              <relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_ENGAGEMENT_SUMMARY' table='[ZOOM].[GOLD].[GO_ENGAGEMENT_SUMMARY]' type='table' />
+            </properties>
+          </object>
+          <object caption='GO_DAILY_MEETING_SUMMARY' id='GO_DAILY_MEETING_SUMMARY_E3R4T5Y6U7I8O9P0A1S2D3F4'>
+            <properties context=''>
+              <relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_DAILY_MEETING_SUMMARY' table='[ZOOM].[GOLD].[GO_DAILY_MEETING_SUMMARY]' type='table' />
+            </properties>
+          </object>
+          <object caption='GO_ORGANIZATION_DIMENSION' id='GO_ORGANIZATION_DIMENSION_R4T5Y6U7I8O9P0A1S2D3F4G5'>
+            <properties context=''>
+              <relation connection='snowflake.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' name='GO_ORGANIZATION_DIMENSION' table='[ZOOM].[GOLD].[GO_ORGANIZATION_DIMENSION]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Audio Video Quality Trends'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Audio Video Quality Trends</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Quality Analytics Data' name='federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c'>
+            <column caption='Summary Date' datatype='date' name='[SUMMARY_DATE]' role='dimension' type='ordinal' />
+            <column caption='Average Audio Quality' datatype='real' name='[AVERAGE_AUDIO_QUALITY]' role='measure' type='quantitative' />
+            <column caption='Average Video Quality' datatype='real' name='[AVERAGE_VIDEO_QUALITY]' role='measure' type='quantitative' />
+            <column-instance column='[SUMMARY_DATE]' derivation='Month-Trunc' name='[tmn:SUMMARY_DATE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AVERAGE_AUDIO_QUALITY]' derivation='Avg' name='[avg:AVERAGE_AUDIO_QUALITY:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AVERAGE_VIDEO_QUALITY]' derivation='Avg' name='[avg:AVERAGE_VIDEO_QUALITY:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[Multiple Values]' palette='tableau_10_medium' type='ordinal' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[avg:AVERAGE_AUDIO_QUALITY:qk] + [federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[avg:AVERAGE_VIDEO_QUALITY:qk])</rows>
+        <cols>[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[tmn:SUMMARY_DATE:qk]</cols>
+      </table>
+      <simple-id uuid='{Q1W2E3R4-T5Y6-U7I8-O9P0-A1S2D3F4G5H6}' />
+    </worksheet>
+    <worksheet name='Engagement Metrics Dashboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Engagement Metrics Dashboard</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Quality Analytics Data' name='federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c'>
+            <column caption='Organization Name' datatype='string' name='[ORGANIZATION_NAME]' role='dimension' type='nominal' />
+            <column caption='Engagement Index' datatype='real' name='[Calculation_W2E3R4T5Y6U7I8O9]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([AVERAGE_PARTICIPATION_RATE] + [AVERAGE_ATTENTION_SCORE]) / 2' />
+            </column>
+            <column caption='Communication Activity Level' datatype='real' name='[Calculation_R4T5Y6U7I8O9P0A1]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[TOTAL_CHAT_MESSAGES] / [TOTAL_MEETINGS]' />
+            </column>
+            <column-instance column='[ORGANIZATION_NAME]' derivation='None' name='[none:ORGANIZATION_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_W2E3R4T5Y6U7I8O9]' derivation='User' name='[usr:Calculation_W2E3R4T5Y6U7I8O9:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_R4T5Y6U7I8O9P0A1]' derivation='User' name='[usr:Calculation_R4T5Y6U7I8O9P0A1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[usr:Calculation_W2E3R4T5Y6U7I8O9:qk]' palette='green_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[usr:Calculation_W2E3R4T5Y6U7I8O9:qk]' />
+              <size column='[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[usr:Calculation_R4T5Y6U7I8O9P0A1:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[usr:Calculation_W2E3R4T5Y6U7I8O9:qk]</rows>
+        <cols>[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[none:ORGANIZATION_NAME:nk]</cols>
+      </table>
+      <simple-id uuid='{W2E3R4T5-Y6U7-I8O9-P0A1-S2D3F4G5H6J7}' />
+    </worksheet>
+    <worksheet name='Connection Success Rate Analysis'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Connection Success Rate Analysis</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Quality Analytics Data' name='federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c'>
+            <column caption='Summary Date' datatype='date' name='[SUMMARY_DATE]' role='dimension' type='ordinal' />
+            <column caption='Connection Success Rate' datatype='real' name='[CONNECTION_SUCCESS_RATE]' role='measure' type='quantitative' />
+            <column caption='User Satisfaction Score' datatype='real' name='[USER_SATISFACTION_SCORE]' role='measure' type='quantitative' />
+            <column caption='Meeting Efficiency Score' datatype='real' name='[Calculation_E3R4T5Y6U7I8O9P0]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[CONNECTION_SUCCESS_RATE] * [USER_SATISFACTION_SCORE] / 100' />
+            </column>
+            <column-instance column='[SUMMARY_DATE]' derivation='Week-Trunc' name='[twk:SUMMARY_DATE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CONNECTION_SUCCESS_RATE]' derivation='Avg' name='[avg:CONNECTION_SUCCESS_RATE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[USER_SATISFACTION_SCORE]' derivation='Avg' name='[avg:USER_SATISFACTION_SCORE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_E3R4T5Y6U7I8O9P0]' derivation='User' name='[usr:Calculation_E3R4T5Y6U7I8O9P0:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[Multiple Values]' palette='red_green_diverging_10_0' type='ordinal' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[avg:CONNECTION_SUCCESS_RATE:qk] + ([federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[avg:USER_SATISFACTION_SCORE:qk] + [federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[usr:Calculation_E3R4T5Y6U7I8O9P0:qk]))</rows>
+        <cols>[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[twk:SUMMARY_DATE:qk]</cols>
+      </table>
+      <simple-id uuid='{E3R4T5Y6-U7I8-O9P0-A1S2-D3F4G5H6J7K8}' />
+    </worksheet>
+    <worksheet name='Overall Quality Score Heatmap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Overall Quality Score Heatmap</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Quality Analytics Data' name='federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c'>
+            <column caption='Summary Date' datatype='date' name='[SUMMARY_DATE]' role='dimension' type='ordinal' />
+            <column caption='Organization Name' datatype='string' name='[ORGANIZATION_NAME]' role='dimension' type='nominal' />
+            <column caption='Overall Quality Score' datatype='real' name='[Calculation_Q1W2E3R4T5Y6U7I8]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([AVERAGE_AUDIO_QUALITY] + [AVERAGE_VIDEO_QUALITY]) / 2' />
+            </column>
+            <column-instance column='[SUMMARY_DATE]' derivation='Month-Trunc' name='[tmn:SUMMARY_DATE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ORGANIZATION_NAME]' derivation='None' name='[none:ORGANIZATION_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_Q1W2E3R4T5Y6U7I8]' derivation='User' name='[usr:Calculation_Q1W2E3R4T5Y6U7I8:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='120' />
+            <format attr='height' value='60' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[usr:Calculation_Q1W2E3R4T5Y6U7I8:qk]' palette='red_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[usr:Calculation_Q1W2E3R4T5Y6U7I8:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[none:ORGANIZATION_NAME:nk]</rows>
+        <cols>[federated.2b3c4d5e6f7a8b9c0d1e2f3a4b5c].[tmn:SUMMARY_DATE:qk]</cols>
+      </table>
+      <simple-id uuid='{R4T5Y6U7-I8O9-P0A1-S2D3-F4G5H6J7K8L9}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Audio Video Quality Trends'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{T5Y6U7I8-O9P0-A1S2-D3F4-G5H6J7K8L9M0}' />
+    </window>
+    <window class='worksheet' name='Engagement Metrics Dashboard'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{Y6U7I8O9-P0A1-S2D3-F4G5-H6J7K8L9M0N1}' />
+    </window>
+    <window class='worksheet' name='Connection Success Rate Analysis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{U7I8O9P0-A1S2-D3F4-G5H6-J7K8L9M0N1O2}' />
+    </window>
+    <window class='worksheet' name='Overall Quality Score Heatmap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{I8O9P0A1-S2D3-F4G5-H6J7-K8L9M0N1O2P3}' />
+    </window>
+  </windows>
+</workbook>
