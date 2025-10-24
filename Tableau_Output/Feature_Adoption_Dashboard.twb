@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.25.1003.1122                               -->
+<workbook original-version='18.1' source-build='2024.2.16 (20242.25.1003.1122)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='ZOOM_FEATURE_DATA' inline='true' name='federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='CMMOEUI-DH77804.snowflakecomputing.com' name='snowflake.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b'>
+            <connection authentication='Username Password' class='snowflake' dbname='ZOOM' max-varchar-size='' odbc-connect-string-extras='' one-time-sql='' schema='GOLD' server='cmmoeui-dh77804.snowflakecomputing.com' service='ACCOUNTADMIN' username='SATHYA' warehouse='COMPUTE_WH' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='snowflake.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b' name='GO_FEATURE_ADOPTION_SUMMARY' table='[ZOOM].[GOLD].[GO_FEATURE_ADOPTION_SUMMARY]' type='table' />
+          <relation connection='snowflake.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b' name='GO_MONTHLY_USER_ACTIVITY' table='[ZOOM].[GOLD].[GO_MONTHLY_USER_ACTIVITY]' type='table' />
+          <relation connection='snowflake.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b' name='GO_ORGANIZATION_DIMENSION' table='[ZOOM].[GOLD].[GO_ORGANIZATION_DIMENSION]' type='table' />
+          <relation connection='snowflake.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b' name='GO_USER_DIMENSION' table='[ZOOM].[GOLD].[GO_USER_DIMENSION]' type='table' />
+          <relation connection='snowflake.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b' name='GO_TIME_DIMENSION' table='[ZOOM].[GOLD].[GO_TIME_DIMENSION]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[ADOPTION_ID]' value='[GO_FEATURE_ADOPTION_SUMMARY].[ADOPTION_ID]' />
+          <map key='[SUMMARY_PERIOD]' value='[GO_FEATURE_ADOPTION_SUMMARY].[SUMMARY_PERIOD]' />
+          <map key='[ORGANIZATION_ID]' value='[GO_FEATURE_ADOPTION_SUMMARY].[ORGANIZATION_ID]' />
+          <map key='[FEATURE_NAME]' value='[GO_FEATURE_ADOPTION_SUMMARY].[FEATURE_NAME]' />
+          <map key='[TOTAL_USAGE_COUNT]' value='[GO_FEATURE_ADOPTION_SUMMARY].[TOTAL_USAGE_COUNT]' />
+          <map key='[UNIQUE_USERS_COUNT]' value='[GO_FEATURE_ADOPTION_SUMMARY].[UNIQUE_USERS_COUNT]' />
+          <map key='[ADOPTION_RATE]' value='[GO_FEATURE_ADOPTION_SUMMARY].[ADOPTION_RATE]' />
+          <map key='[USAGE_TREND]' value='[GO_FEATURE_ADOPTION_SUMMARY].[USAGE_TREND]' />
+          <map key='[ACTIVITY_MONTH]' value='[GO_MONTHLY_USER_ACTIVITY].[ACTIVITY_MONTH]' />
+          <map key='[MEETINGS_HOSTED]' value='[GO_MONTHLY_USER_ACTIVITY].[MEETINGS_HOSTED]' />
+          <map key='[MEETINGS_ATTENDED]' value='[GO_MONTHLY_USER_ACTIVITY].[MEETINGS_ATTENDED]' />
+          <map key='[WEBINARS_HOSTED]' value='[GO_MONTHLY_USER_ACTIVITY].[WEBINARS_HOSTED]' />
+          <map key='[WEBINARS_ATTENDED]' value='[GO_MONTHLY_USER_ACTIVITY].[WEBINARS_ATTENDED]' />
+          <map key='[RECORDINGS_CREATED]' value='[GO_MONTHLY_USER_ACTIVITY].[RECORDINGS_CREATED]' />
+          <map key='[STORAGE_USED_GB]' value='[GO_MONTHLY_USER_ACTIVITY].[STORAGE_USED_GB]' />
+          <map key='[ORGANIZATION_NAME]' value='[GO_ORGANIZATION_DIMENSION].[ORGANIZATION_NAME]' />
+          <map key='[INDUSTRY_CLASSIFICATION]' value='[GO_ORGANIZATION_DIMENSION].[INDUSTRY_CLASSIFICATION]' />
+          <map key='[ORGANIZATION_SIZE]' value='[GO_ORGANIZATION_DIMENSION].[ORGANIZATION_SIZE]' />
+          <map key='[USER_NAME]' value='[GO_USER_DIMENSION].[USER_NAME]' />
+          <map key='[EMAIL_ADDRESS]' value='[GO_USER_DIMENSION].[EMAIL_ADDRESS]' />
+          <map key='[DEPARTMENT_NAME]' value='[GO_USER_DIMENSION].[DEPARTMENT_NAME]' />
+          <map key='[MONTH_NAME]' value='[GO_TIME_DIMENSION].[MONTH_NAME]' />
+          <map key='[YEAR_NUMBER]' value='[GO_TIME_DIMENSION].[YEAR_NUMBER]' />
+          <map key='[QUARTER_NUMBER]' value='[GO_TIME_DIMENSION].[QUARTER_NUMBER]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>TOTAL_USAGE_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[TOTAL_USAGE_COUNT]</local-name>
+            <parent-name>[GO_FEATURE_ADOPTION_SUMMARY]</parent-name>
+            <remote-alias>TOTAL_USAGE_COUNT</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UNIQUE_USERS_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[UNIQUE_USERS_COUNT]</local-name>
+            <parent-name>[GO_FEATURE_ADOPTION_SUMMARY]</parent-name>
+            <remote-alias>UNIQUE_USERS_COUNT</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADOPTION_RATE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[ADOPTION_RATE]</local-name>
+            <parent-name>[GO_FEATURE_ADOPTION_SUMMARY]</parent-name>
+            <remote-alias>ADOPTION_RATE</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Summary Period' datatype='date' name='[SUMMARY_PERIOD]' role='dimension' type='ordinal' />
+      <column caption='Feature Name' datatype='string' name='[FEATURE_NAME]' role='dimension' type='nominal' />
+      <column caption='Total Usage Count' datatype='integer' name='[TOTAL_USAGE_COUNT]' role='measure' type='quantitative' />
+      <column caption='Unique Users Count' datatype='integer' name='[UNIQUE_USERS_COUNT]' role='measure' type='quantitative' />
+      <column caption='Adoption Rate' datatype='real' name='[ADOPTION_RATE]' role='measure' type='quantitative' />
+      <column caption='Usage Trend' datatype='string' name='[USAGE_TREND]' role='dimension' type='nominal' />
+      <column caption='Activity Month' datatype='date' name='[ACTIVITY_MONTH]' role='dimension' type='ordinal' />
+      <column caption='Meetings Hosted' datatype='integer' name='[MEETINGS_HOSTED]' role='measure' type='quantitative' />
+      <column caption='Meetings Attended' datatype='integer' name='[MEETINGS_ATTENDED]' role='measure' type='quantitative' />
+      <column caption='Webinars Hosted' datatype='integer' name='[WEBINARS_HOSTED]' role='measure' type='quantitative' />
+      <column caption='Webinars Attended' datatype='integer' name='[WEBINARS_ATTENDED]' role='measure' type='quantitative' />
+      <column caption='Recordings Created' datatype='integer' name='[RECORDINGS_CREATED]' role='measure' type='quantitative' />
+      <column caption='Storage Used GB' datatype='real' name='[STORAGE_USED_GB]' role='measure' type='quantitative' />
+      <column caption='Organization Name' datatype='string' name='[ORGANIZATION_NAME]' role='dimension' type='nominal' />
+      <column caption='Industry Classification' datatype='string' name='[INDUSTRY_CLASSIFICATION]' role='dimension' type='nominal' />
+      <column caption='Organization Size' datatype='string' name='[ORGANIZATION_SIZE]' role='dimension' type='nominal' />
+      <column caption='User Name' datatype='string' name='[USER_NAME]' role='dimension' type='nominal' />
+      <column caption='Email Address' datatype='string' name='[EMAIL_ADDRESS]' role='dimension' type='nominal' />
+      <column caption='Department Name' datatype='string' name='[DEPARTMENT_NAME]' role='dimension' type='nominal' />
+      <column caption='Masked Email' datatype='string' name='[Calculation_1]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='LEFT([EMAIL_ADDRESS], 1) + &quot;****@&quot; + SPLIT([EMAIL_ADDRESS], &quot;@&quot;, 2)' />
+      </column>
+      <column caption='Feature Penetration Rate' datatype='real' name='[Calculation_2]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ATTR([UNIQUE_USERS_COUNT]) / SUM([MEETINGS_HOSTED] + [MEETINGS_ATTENDED]) * 100' />
+      </column>
+      <column caption='Usage Intensity' datatype='real' name='[Calculation_3]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ATTR([TOTAL_USAGE_COUNT]) / ATTR([UNIQUE_USERS_COUNT])' />
+      </column>
+      <column caption='Digital Engagement Score' datatype='real' name='[Calculation_4]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([WEBINARS_HOSTED]) + SUM([WEBINARS_ATTENDED]) + SUM([RECORDINGS_CREATED])) / (SUM([MEETINGS_HOSTED]) + SUM([MEETINGS_ATTENDED])) * 100' />
+      </column>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Feature Adoption Trends'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_FEATURE_DATA' name='federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b'>
+            <column caption='Summary Period' datatype='date' name='[SUMMARY_PERIOD]' role='dimension' type='ordinal' />
+            <column caption='Feature Name' datatype='string' name='[FEATURE_NAME]' role='dimension' type='nominal' />
+            <column caption='Adoption Rate' datatype='real' name='[ADOPTION_RATE]' role='measure' type='quantitative' />
+            <column-instance column='[SUMMARY_PERIOD]' derivation='Month-Year' name='[tmn:SUMMARY_PERIOD:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[FEATURE_NAME]' derivation='None' name='[none:FEATURE_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ADOPTION_RATE]' derivation='Attr' name='[attr:ADOPTION_RATE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[none:FEATURE_NAME:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[attr:ADOPTION_RATE:qk]</rows>
+        <cols>[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[tmn:SUMMARY_PERIOD:qk]</cols>
+      </table>
+      <simple-id uuid='{D7E8F9AB-CDEF-1234-D789-ABCDEF123456}' />
+    </worksheet>
+    <worksheet name='Feature Usage Comparison'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_FEATURE_DATA' name='federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b'>
+            <column caption='Feature Name' datatype='string' name='[FEATURE_NAME]' role='dimension' type='nominal' />
+            <column caption='Total Usage Count' datatype='integer' name='[TOTAL_USAGE_COUNT]' role='measure' type='quantitative' />
+            <column caption='Feature Penetration Rate' datatype='real' name='[Calculation_2]' role='measure' type='quantitative' />
+            <column caption='Usage Intensity' datatype='real' name='[Calculation_3]' role='measure' type='quantitative' />
+            <column-instance column='[FEATURE_NAME]' derivation='None' name='[none:FEATURE_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TOTAL_USAGE_COUNT]' derivation='Sum' name='[sum:TOTAL_USAGE_COUNT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2]' derivation='Attr' name='[attr:Calculation_2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3]' derivation='Attr' name='[attr:Calculation_3:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[sum:TOTAL_USAGE_COUNT:qk]' />
+              <color column='[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[attr:Calculation_3:qk]' />
+              <text column='[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[none:FEATURE_NAME:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[attr:Calculation_2:qk]</rows>
+        <cols>[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[attr:Calculation_3:qk]</cols>
+      </table>
+      <simple-id uuid='{E8F9ABCD-EF12-3456-E89A-BCDEF1234567}' />
+    </worksheet>
+    <worksheet name='Department Digital Engagement'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_FEATURE_DATA' name='federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b'>
+            <column caption='Department Name' datatype='string' name='[DEPARTMENT_NAME]' role='dimension' type='nominal' />
+            <column caption='Digital Engagement Score' datatype='real' name='[Calculation_4]' role='measure' type='quantitative' />
+            <column caption='Storage Used GB' datatype='real' name='[STORAGE_USED_GB]' role='measure' type='quantitative' />
+            <column-instance column='[DEPARTMENT_NAME]' derivation='None' name='[none:DEPARTMENT_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_4]' derivation='Attr' name='[attr:Calculation_4:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[STORAGE_USED_GB]' derivation='Sum' name='[sum:STORAGE_USED_GB:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[sum:STORAGE_USED_GB:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[none:DEPARTMENT_NAME:nk]</rows>
+        <cols>[federated.5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b].[attr:Calculation_4:qk]</cols>
+      </table>
+      <simple-id uuid='{F9ABCDEF-1234-5678-F9AB-CDEF12345678}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Feature Adoption Trends'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{ABCDEF12-3456-789A-ABCD-EF123456789A}' />
+    </window>
+  </windows>
+</workbook>
