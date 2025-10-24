@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.25.1003.1122                               -->
+<workbook original-version='18.1' source-build='2024.2.16 (20242.25.1003.1122)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='ZOOM_BILLING_DATA' inline='true' name='federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='CMMOEUI-DH77804.snowflakecomputing.com' name='snowflake.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a'>
+            <connection authentication='Username Password' class='snowflake' dbname='ZOOM' max-varchar-size='' odbc-connect-string-extras='' one-time-sql='' schema='GOLD' server='cmmoeui-dh77804.snowflakecomputing.com' service='ACCOUNTADMIN' username='SATHYA' warehouse='COMPUTE_WH' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='snowflake.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a' name='GO_BILLING_FACTS' table='[ZOOM].[GOLD].[GO_BILLING_FACTS]' type='table' />
+          <relation connection='snowflake.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a' name='GO_ORGANIZATION_DIMENSION' table='[ZOOM].[GOLD].[GO_ORGANIZATION_DIMENSION]' type='table' />
+          <relation connection='snowflake.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a' name='GO_USER_DIMENSION' table='[ZOOM].[GOLD].[GO_USER_DIMENSION]' type='table' />
+          <relation connection='snowflake.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a' name='GO_TIME_DIMENSION' table='[ZOOM].[GOLD].[GO_TIME_DIMENSION]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[BILLING_FACT_ID]' value='[GO_BILLING_FACTS].[BILLING_FACT_ID]' />
+          <map key='[EVENT_ID]' value='[GO_BILLING_FACTS].[EVENT_ID]' />
+          <map key='[USER_ID]' value='[GO_BILLING_FACTS].[USER_ID]' />
+          <map key='[ORGANIZATION_ID]' value='[GO_BILLING_FACTS].[ORGANIZATION_ID]' />
+          <map key='[EVENT_TYPE]' value='[GO_BILLING_FACTS].[EVENT_TYPE]' />
+          <map key='[AMOUNT]' value='[GO_BILLING_FACTS].[AMOUNT]' />
+          <map key='[EVENT_DATE]' value='[GO_BILLING_FACTS].[EVENT_DATE]' />
+          <map key='[BILLING_PERIOD_START]' value='[GO_BILLING_FACTS].[BILLING_PERIOD_START]' />
+          <map key='[BILLING_PERIOD_END]' value='[GO_BILLING_FACTS].[BILLING_PERIOD_END]' />
+          <map key='[PAYMENT_METHOD]' value='[GO_BILLING_FACTS].[PAYMENT_METHOD]' />
+          <map key='[TRANSACTION_STATUS]' value='[GO_BILLING_FACTS].[TRANSACTION_STATUS]' />
+          <map key='[CURRENCY_CODE]' value='[GO_BILLING_FACTS].[CURRENCY_CODE]' />
+          <map key='[TAX_AMOUNT]' value='[GO_BILLING_FACTS].[TAX_AMOUNT]' />
+          <map key='[DISCOUNT_AMOUNT]' value='[GO_BILLING_FACTS].[DISCOUNT_AMOUNT]' />
+          <map key='[ORGANIZATION_NAME]' value='[GO_ORGANIZATION_DIMENSION].[ORGANIZATION_NAME]' />
+          <map key='[INDUSTRY_CLASSIFICATION]' value='[GO_ORGANIZATION_DIMENSION].[INDUSTRY_CLASSIFICATION]' />
+          <map key='[ORGANIZATION_SIZE]' value='[GO_ORGANIZATION_DIMENSION].[ORGANIZATION_SIZE]' />
+          <map key='[MAXIMUM_USER_LIMIT]' value='[GO_ORGANIZATION_DIMENSION].[MAXIMUM_USER_LIMIT]' />
+          <map key='[STORAGE_QUOTA_GB]' value='[GO_ORGANIZATION_DIMENSION].[STORAGE_QUOTA_GB]' />
+          <map key='[CONTRACT_START_DATE]' value='[GO_ORGANIZATION_DIMENSION].[CONTRACT_START_DATE]' />
+          <map key='[CONTRACT_END_DATE]' value='[GO_ORGANIZATION_DIMENSION].[CONTRACT_END_DATE]' />
+          <map key='[USER_NAME]' value='[GO_USER_DIMENSION].[USER_NAME]' />
+          <map key='[EMAIL_ADDRESS]' value='[GO_USER_DIMENSION].[EMAIL_ADDRESS]' />
+          <map key='[DEPARTMENT_NAME]' value='[GO_USER_DIMENSION].[DEPARTMENT_NAME]' />
+          <map key='[DATE_KEY]' value='[GO_TIME_DIMENSION].[DATE_KEY]' />
+          <map key='[MONTH_NAME]' value='[GO_TIME_DIMENSION].[MONTH_NAME]' />
+          <map key='[YEAR_NUMBER]' value='[GO_TIME_DIMENSION].[YEAR_NUMBER]' />
+          <map key='[QUARTER_NUMBER]' value='[GO_TIME_DIMENSION].[QUARTER_NUMBER]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>AMOUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[AMOUNT]</local-name>
+            <parent-name>[GO_BILLING_FACTS]</parent-name>
+            <remote-alias>AMOUNT</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TAX_AMOUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[TAX_AMOUNT]</local-name>
+            <parent-name>[GO_BILLING_FACTS]</parent-name>
+            <remote-alias>TAX_AMOUNT</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DISCOUNT_AMOUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[DISCOUNT_AMOUNT]</local-name>
+            <parent-name>[GO_BILLING_FACTS]</parent-name>
+            <remote-alias>DISCOUNT_AMOUNT</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Event Type' datatype='string' name='[EVENT_TYPE]' role='dimension' type='nominal' />
+      <column caption='Amount' datatype='real' name='[AMOUNT]' role='measure' type='quantitative' />
+      <column caption='Event Date' datatype='date' name='[EVENT_DATE]' role='dimension' type='ordinal' />
+      <column caption='Payment Method' datatype='string' name='[PAYMENT_METHOD]' role='dimension' type='nominal' />
+      <column caption='Transaction Status' datatype='string' name='[TRANSACTION_STATUS]' role='dimension' type='nominal' />
+      <column caption='Currency Code' datatype='string' name='[CURRENCY_CODE]' role='dimension' type='nominal' />
+      <column caption='Tax Amount' datatype='real' name='[TAX_AMOUNT]' role='measure' type='quantitative' />
+      <column caption='Discount Amount' datatype='real' name='[DISCOUNT_AMOUNT]' role='measure' type='quantitative' />
+      <column caption='Organization Name' datatype='string' name='[ORGANIZATION_NAME]' role='dimension' type='nominal' />
+      <column caption='Industry Classification' datatype='string' name='[INDUSTRY_CLASSIFICATION]' role='dimension' type='nominal' />
+      <column caption='Organization Size' datatype='string' name='[ORGANIZATION_SIZE]' role='dimension' type='nominal' />
+      <column caption='Maximum User Limit' datatype='integer' name='[MAXIMUM_USER_LIMIT]' role='measure' type='quantitative' />
+      <column caption='Storage Quota GB' datatype='integer' name='[STORAGE_QUOTA_GB]' role='measure' type='quantitative' />
+      <column caption='User Name' datatype='string' name='[USER_NAME]' role='dimension' type='nominal' />
+      <column caption='Email Address' datatype='string' name='[EMAIL_ADDRESS]' role='dimension' type='nominal' />
+      <column caption='Department Name' datatype='string' name='[DEPARTMENT_NAME]' role='dimension' type='nominal' />
+      <column caption='Month Name' datatype='string' name='[MONTH_NAME]' role='dimension' type='nominal' />
+      <column caption='Year Number' datatype='integer' name='[YEAR_NUMBER]' role='dimension' type='nominal' />
+      <column caption='Quarter Number' datatype='integer' name='[QUARTER_NUMBER]' role='dimension' type='nominal' />
+      <column caption='Masked Email' datatype='string' name='[Calculation_1]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='LEFT([EMAIL_ADDRESS], 1) + &quot;****@&quot; + SPLIT([EMAIL_ADDRESS], &quot;@&quot;, 2)' />
+      </column>
+      <column caption='Net Revenue' datatype='real' name='[Calculation_2]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([AMOUNT]) - SUM([DISCOUNT_AMOUNT])' />
+      </column>
+      <column caption='Revenue Growth Rate' datatype='real' name='[Calculation_3]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([AMOUNT]) - LOOKUP(SUM([AMOUNT]), -1)) / LOOKUP(SUM([AMOUNT]), -1) * 100' />
+      </column>
+      <column caption='Transaction Success Rate' datatype='real' name='[Calculation_4]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF [TRANSACTION_STATUS] = &quot;Success&quot; THEN [BILLING_FACT_ID] END) / COUNTD([BILLING_FACT_ID]) * 100' />
+      </column>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Revenue Trends'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_BILLING_DATA' name='federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a'>
+            <column caption='Event Date' datatype='date' name='[EVENT_DATE]' role='dimension' type='ordinal' />
+            <column caption='Net Revenue' datatype='real' name='[Calculation_2]' role='measure' type='quantitative' />
+            <column caption='Revenue Growth Rate' datatype='real' name='[Calculation_3]' role='measure' type='quantitative' />
+            <column-instance column='[EVENT_DATE]' derivation='Month-Year' name='[tmn:EVENT_DATE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2]' derivation='Attr' name='[attr:Calculation_2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3]' derivation='Attr' name='[attr:Calculation_3:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[attr:Calculation_2:qk],[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[attr:Calculation_3:qk])</rows>
+        <cols>[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[tmn:EVENT_DATE:qk]</cols>
+      </table>
+      <simple-id uuid='{F3A4B5C6-D7E8-9ABC-F345-6789ABCDEF12}' />
+    </worksheet>
+    <worksheet name='Payment Methods Analysis'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_BILLING_DATA' name='federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a'>
+            <column caption='Payment Method' datatype='string' name='[PAYMENT_METHOD]' role='dimension' type='nominal' />
+            <column caption='Amount' datatype='real' name='[AMOUNT]' role='measure' type='quantitative' />
+            <column caption='Transaction Success Rate' datatype='real' name='[Calculation_4]' role='measure' type='quantitative' />
+            <column-instance column='[PAYMENT_METHOD]' derivation='None' name='[none:PAYMENT_METHOD:nk]' pivot='key' type='nominal' />
+            <column-instance column='[AMOUNT]' derivation='Sum' name='[sum:AMOUNT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_4]' derivation='Attr' name='[attr:Calculation_4:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[sum:AMOUNT:qk]' />
+              <color column='[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[attr:Calculation_4:qk]' />
+              <text column='[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[none:PAYMENT_METHOD:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[attr:Calculation_4:qk]</rows>
+        <cols>[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[sum:AMOUNT:qk]</cols>
+      </table>
+      <simple-id uuid='{A4B5C6D7-E8F9-ABCD-A456-789ABCDEF123}' />
+    </worksheet>
+    <worksheet name='Organization Revenue Breakdown'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ZOOM_BILLING_DATA' name='federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a'>
+            <column caption='Organization Name' datatype='string' name='[ORGANIZATION_NAME]' role='dimension' type='nominal' />
+            <column caption='Industry Classification' datatype='string' name='[INDUSTRY_CLASSIFICATION]' role='dimension' type='nominal' />
+            <column caption='Net Revenue' datatype='real' name='[Calculation_2]' role='measure' type='quantitative' />
+            <column-instance column='[ORGANIZATION_NAME]' derivation='None' name='[none:ORGANIZATION_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[INDUSTRY_CLASSIFICATION]' derivation='None' name='[none:INDUSTRY_CLASSIFICATION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2]' derivation='Attr' name='[attr:Calculation_2:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[none:INDUSTRY_CLASSIFICATION:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[none:ORGANIZATION_NAME:nk]</rows>
+        <cols>[federated.4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a].[attr:Calculation_2:qk]</cols>
+      </table>
+      <simple-id uuid='{B5C6D7E8-F9AB-CDEF-B567-89ABCDEF1234}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Revenue Trends'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C6D7E8F9-ABCD-EF12-C678-9ABCDEF12345}' />
+    </window>
+  </windows>
+</workbook>
